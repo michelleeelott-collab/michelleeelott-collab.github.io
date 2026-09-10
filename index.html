@@ -103,6 +103,11 @@
   .stat .v{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.9rem;color:var(--blueprint);line-height:1}
   .stat .l{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px}
   .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .cat{grid-column:1/-1;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blueprint);margin:22px 0 -2px;display:flex;align-items:center;gap:12px}
+  .cat:first-child{margin-top:0}
+  .cat::before{content:"";width:22px;height:1px;background:var(--blueprint)}
+  .cat::after{content:"";flex:1;height:1px;background:var(--line)}
+  .proj.wide{grid-column:1/-1}
   .proj{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;position:relative;overflow:hidden;transition:transform .28s,border-color .28s,box-shadow .28s}
   .proj::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--blueprint),var(--signal));transform:scaleX(0);transform-origin:left;transition:transform .35s}
   .proj:hover{transform:translateY(-5px);border-color:var(--blueprint-soft);box-shadow:var(--shadow)}
@@ -257,7 +262,8 @@
   <div class="wrap">
     <div class="sec-head reveal"><span class="num">02 / Projetos</span><h2>Problemas reais, resolvidos com dados.</h2><p>Cada projeto segue a mesma lógica: um problema, uma abordagem e um resultado que dá pra medir.</p></div>
     <div class="projects">
-      <article class="proj reveal">
+      <h3 class="cat">Business Intelligence</h3>
+      <article class="proj reveal wide">
         <span class="tag">Business Intelligence · Power BI</span>
         <h3>Painel Analítico: Nascidos Vivos no Brasil</h3>
         <p class="desc">Dashboard interativo em Power BI com análise geográfica e temporal dos nascimentos no Brasil: KPIs, mapa geoespacial, filtros e medidas DAX criadas do zero (soma, média mensal, mês de pico e estado líder).</p>
@@ -265,6 +271,7 @@
         <div class="stack"><span>Power BI</span><span>DAX</span><span>Modelagem</span><span>Mapa geoespacial</span></div>
         <div class="links"><a href="https://github.com/michelleeelott-collab/painel-nascidos-vivos-powerbi" target="_blank" rel="noopener">Ver no GitHub →</a></div>
       </article>
+      <h3 class="cat">Inteligência Artificial &amp; Machine Learning</h3>
       <article class="proj reveal">
         <span class="tag">Machine Learning · Python</span>
         <h3>Previsão de Atraso na Entrega</h3>
@@ -274,6 +281,15 @@
         <div class="links"><a href="https://github.com/michelleeelott-collab/previsao-atraso-entrega-ml" target="_blank" rel="noopener">Ver no GitHub →</a></div>
       </article>
       <article class="proj reveal">
+        <span class="tag">IA Generativa · LLM</span>
+        <h3>Lott AI Coder</h3>
+        <p class="desc">Assistente de chat que usa um LLM (via API da Groq) para tirar dúvidas de Python, com respostas estruturadas: explicação, código comentado e link para a documentação. Interface web em Streamlit.</p>
+        <div class="result"><span class="n">LLM</span><span class="rl">assistente de Python via Groq API, feito em Streamlit</span></div>
+        <div class="stack"><span>Python</span><span>Streamlit</span><span>Groq API</span><span>LLM</span></div>
+        <div class="links"><a href="https://github.com/michelleeelott-collab/lott-ai-coder" target="_blank" rel="noopener">Ver no GitHub →</a></div>
+      </article>
+      <h3 class="cat">SQL &amp; Engenharia de Dados</h3>
+      <article class="proj reveal wide">
         <span class="tag">Data Engineering · SQL</span>
         <h3>Pipeline Analítico de E-commerce (Olist)</h3>
         <p class="desc">Pipeline em SQL que transforma o banco relacional do e-commerce Olist (9 tabelas) em uma tabela analítica única, com CTEs encadeadas, window functions e KPIs de logística e satisfação, orquestrado por Python.</p>
@@ -281,6 +297,7 @@
         <div class="stack"><span>SQL</span><span>SQLite</span><span>Window Functions</span><span>Python</span></div>
         <div class="links"><a href="https://github.com/michelleeelott-collab/pipeline-sql-olist" target="_blank" rel="noopener">Ver no GitHub →</a></div>
       </article>
+      <h3 class="cat">Python &amp; Automação</h3>
       <article class="proj reveal">
         <span class="tag">Análise de Dados · Python</span>
         <h3>Análise de Acidentes de Trabalho (CAT/INSS)</h3>
@@ -288,6 +305,14 @@
         <div class="result"><span class="n">1 script</span><span class="rl">que lê, limpa e analisa os dados oficiais</span></div>
         <div class="stack"><span>Python</span><span>pandas</span><span>matplotlib</span></div>
         <div class="links"><a href="https://github.com/michelleeelott-collab/analise-acidentes-cat" target="_blank" rel="noopener">Ver no GitHub →</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="tag">Análise de Dados · Python</span>
+        <h3>Análise de Vendas de E-commerce</h3>
+        <p class="desc">Análise exploratória de vendas com NumPy, Pandas e Matplotlib: limpeza, engenharia de atributos e quatro análises (top produtos, faturamento mensal, vendas por estado e por categoria).</p>
+        <div class="result"><span class="n">4 análises</span><span class="rl">de dados de vendas, do problema ao insight</span></div>
+        <div class="stack"><span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span></div>
+        <div class="links"><a href="https://github.com/michelleeelott-collab/analise-vendas-ecommerce" target="_blank" rel="noopener">Ver no GitHub →</a></div>
       </article>
       <article class="proj reveal">
         <span class="tag">Automação · VBA</span>
